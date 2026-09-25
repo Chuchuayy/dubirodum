@@ -6,10 +6,10 @@ const CONFIG = {
 };
 
 const MAP = L.map('map', { zoomControl: false, attributionControl: false })
- .setView(CONFIG.CENTER, CONFIG.ZOOM);
+.setView(CONFIG.CENTER, CONFIG.ZOOM);
 
-L.tileLayer('https://tiles.openfreemap.org/natural_earth/ne2sr/{z}/{x}/{y}.png', {
-  maxZoom: 6
+L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2020-06-04/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpg',{
+  maxZoom: 8
 }).addTo(MAP);
 
 const renderMarker = (lat, lng, mag) => {
@@ -40,7 +40,7 @@ fetchIntel().then(data => {
     </div>
   `).join('');
   data.forEach(f => {
-    const [lng][lat] = f.geometry.coordinates;
+    const [lng, lat] = f.geometry.coordinates;
     renderMarker(lat, lng, f.properties.mag);
   });
 });
