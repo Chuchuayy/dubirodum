@@ -1,0 +1,2 @@
+# dubirodum
+earthquake website 
