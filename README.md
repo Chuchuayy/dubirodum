@@ -1,2 +1,2 @@
-# dubirodum
+# Dubirodum
 earthquake website 
