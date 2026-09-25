@@ -1,0 +1,100 @@
+:root {
+  --bg: #EDEEF1;
+  --card: #FFFFFF;
+  --text: #111111;
+  --muted: #888888;
+  --alert: #FF1A1A;
+  --radius: 28px;
+  --radius-sm: 16px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.viewport {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background: var(--card);
+}
+
+header {
+  padding: 28px 0 14px;
+  text-align: center;
+  letter-spacing: 6px;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--text);
+}
+
+#map {
+  width: 93%;
+  height: 60vh;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+  background: #000;
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+#feed {
+  width: 93%;
+  margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.mag {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--text);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.mag.alert {
+  background: var(--alert);
+}
+
+.card p {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.card small {
+  font-size: 11px;
+  color: var(--muted);
+}
