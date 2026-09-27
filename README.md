@@ -1,2 +1,2 @@
 # Dubirodum
-earthquake website 
+ebook hmm platform?
